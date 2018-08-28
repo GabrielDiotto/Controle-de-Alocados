@@ -37,13 +37,20 @@ import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
+import { LoginComponent } from './components/login/login.component';
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { ChartsModule } from 'ng2-charts';
+import { FuncionariosComponent } from './components/funcionarios/funcionarios.component';
+import { ApiService } from './services/api.service';
+import { FuncionariosService } from './services/funcionarios/funcionarios.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavigationComponent
+    NavigationComponent,
+    LoginComponent,
+    FuncionariosComponent
   ],
   imports: [
     MatButtonModule,
@@ -88,7 +95,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatPaginatorModule,
     MatSortModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ChartsModule
   ],
   exports: [
     MatButtonModule,
@@ -117,6 +125,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatCheckboxModule
   ],
   providers: [
+    { provide: ApiService, useClass: ApiService },
+    { provide: FuncionariosService, useClass: FuncionariosService },
     { provide: ToastrService, useClass: ToastrService },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],

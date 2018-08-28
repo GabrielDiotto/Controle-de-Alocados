@@ -1,11 +1,11 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport="true" [attr.role]="true" [mode]="side" [opened]="false">
-      <mat-toolbar color="red">Menu</mat-toolbar>
+      <mat-toolbar color="primary">Menu</mat-toolbar>
       <mat-nav-list>
           <a mat-list-item routerDirection="'root'" routerLink="">
               <mat-icon class="material-icons icone" aria-label="Side nav toggle icon">home</mat-icon>
               Home</a>
-          <a mat-list-item routerDirection="'root'" routerLink="">
+          <a mat-list-item routerDirection="'root'" routerLink="/funcionarios">
               <mat-icon class="material-icons icone" aria-label="Side nav toggle icon">person</mat-icon>
               Funcionários</a>
           <a mat-list-item routerDirection="'root'" routerLink="">
@@ -17,11 +17,11 @@
       </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-      <mat-toolbar color="red">
+      <mat-toolbar color="primary">
           <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
         <mat-icon class="menu" aria-label="Side nav toggle icon">menu</mat-icon>
     </button>
-          <span>Envio de Pesquisa</span>
+          <span>Controle de Alocados</span>
       </mat-toolbar>
       <router-outlet></router-outlet>
   </mat-sidenav-content>

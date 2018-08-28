@@ -14,7 +14,7 @@ export class ErrorInterceptor implements HttpInterceptor {
                 //login automatico se retornar 401 da api
                 // location.reload(true);
             }    
-
+debugger
             const error = err.error.message || err.statusText;
             return throwError(error);
         }))

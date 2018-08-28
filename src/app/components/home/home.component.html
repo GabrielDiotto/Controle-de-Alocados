@@ -1,9 +1,27 @@
 <mat-toolbar>
   <mat-toolbar-row>
-    <span>Controle De Alocados</span>
+    <span>Adicionar Gráfico</span>
     <span class="example-spacer"></span>
-    <button routerLink="./area/criar" mat-icon-button>
+    <button routerLink="" mat-icon-button>
       <mat-icon aria-label="Adicionar uma área" class="example-icon">add_circle</mat-icon>
     </button>
   </mat-toolbar-row>
 </mat-toolbar>
+
+<div class="mb-20" fxLayout="row" fxLayout.lt-md="column" fxFlex fxLayoutGap="20px">
+  <div fxFlex>
+      <mat-card>
+          <mat-card-header>
+              <mat-card-title>Gráfico de custo funcionário desalocado</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <canvas baseChart
+            [data]="doughnutChartData"
+            [labels]="doughnutChartLabels"
+            [chartType]="doughnutChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+          </mat-card-content>
+      </mat-card>
+  </div>
+</div>

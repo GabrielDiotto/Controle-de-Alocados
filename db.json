@@ -1,0 +1,19 @@
+  {
+  "funcionario": [
+    {
+      "id": 1,
+      "nome": "Gabriel Diotto",
+      "funcao": "Desenvolvedor"
+    },
+    {
+      "id": 2,
+      "nome": "Lorrann Rafael",
+      "funcao": "Desenvolvedor"
+    },
+    {
+      "id": 3,
+      "nome": "Tiago",
+      "funcao": "DevOps"
+    }
+  ]
+}
