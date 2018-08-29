@@ -43,6 +43,10 @@ import { ChartsModule } from 'ng2-charts';
 import { FuncionariosComponent } from './components/funcionarios/funcionarios.component';
 import { ApiService } from './services/api.service';
 import { FuncionariosService } from './services/funcionarios/funcionarios.service';
+import { ClientesService } from './services/clientes/clientes.service';
+import { AlocarService } from './services/alocar/alocar.service';
+import { ClientesComponent } from './components/clientes/clientes/clientes.component';
+import { AlocarComponent } from './components/alocar/alocar/alocar.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +54,9 @@ import { FuncionariosService } from './services/funcionarios/funcionarios.servic
     HomeComponent,
     NavigationComponent,
     LoginComponent,
-    FuncionariosComponent
+    FuncionariosComponent,
+    ClientesComponent,
+    AlocarComponent
   ],
   imports: [
     MatButtonModule,
@@ -127,6 +133,8 @@ import { FuncionariosService } from './services/funcionarios/funcionarios.servic
   providers: [
     { provide: ApiService, useClass: ApiService },
     { provide: FuncionariosService, useClass: FuncionariosService },
+    { provide: ClientesService, useClass: ClientesService },
+    { provide: AlocarService, useClass: AlocarService },
     { provide: ToastrService, useClass: ToastrService },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],

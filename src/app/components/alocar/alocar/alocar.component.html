@@ -1,0 +1,45 @@
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="alocados">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="funcionario">
+      <th mat-header-cell *matHeaderCellDef> Funcionário </th>
+      <td mat-cell *matCellDef="let element"> {{element.funcionario}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="cliente">
+      <th mat-header-cell *matHeaderCellDef> Cliente </th>
+      <td mat-cell *matCellDef="let element"> {{element.cliente}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="inicioPrevisto">
+      <th mat-header-cell *matHeaderCellDef> Início Previsto </th>
+      <td mat-cell *matCellDef="let element"> {{element.inicioPrevisto}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="inicio">
+      <th mat-header-cell *matHeaderCellDef> Início </th>
+      <td mat-cell *matCellDef="let element"> {{element.inicio}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="fimPrevisto">
+      <th mat-header-cell *matHeaderCellDef> Fim Previsto </th>
+      <td mat-cell *matCellDef="let element"> {{element.fimPrevisto}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="fim">
+      <th mat-header-cell *matHeaderCellDef> Fim </th>
+      <td mat-cell *matCellDef="let element"> {{element.fim}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>

@@ -15,7 +15,7 @@ export class FuncionariosComponent implements OnInit {
     this.getFuncionarios();
   }
 
-  getFuncionarios(): void{
+  getFuncionarios(): void {
     this.funcionarioService.getFuncionarios()
         .subscribe(funcionarios => {
           debugger

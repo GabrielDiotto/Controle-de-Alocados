@@ -15,5 +15,45 @@
       "nome": "Tiago",
       "funcao": "DevOps"
     }
+  ],
+  "cliente": [
+    {
+      "id": 1,
+      "nome": "Mongeral"
+    },
+    {
+      "id": 2,
+      "nome": "Globo"
+    },
+    {
+      "id": 3,
+      "nome": "Omint"
+    }
+  ],
+  "alocados": [
+    {
+      "funcionario": "Gabriel Diotto",
+      "cliente": "Mongeral",
+      "inicioPrevisto": "10/10/2018",
+      "inicio": "12/10/2018",
+      "fimPrevisto": "10/10/2019",
+      "fim": "08/08/2019"
+    },
+    {
+      "funcionario": "Lorrann Rafael",
+      "cliente": "Mongeral",
+      "inicioPrevisto": "10/10/2018",
+      "inicio": "12/10/2018",
+      "fimPrevisto": "10/10/2019",
+      "fim": "08/08/2019"
+    },
+    {
+      "funcionario": "Paulo Vitar",
+      "cliente": "Mongeral",
+      "inicioPrevisto": "10/10/2018",
+      "inicio": "12/10/2018",
+      "fimPrevisto": "10/10/2019",
+      "fim": "08/08/2019"
+    }
   ]
 }

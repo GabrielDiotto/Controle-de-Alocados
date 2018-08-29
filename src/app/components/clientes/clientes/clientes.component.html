@@ -1,0 +1,24 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <span>Clientes</span>
+    <span class="example-spacer"></span>
+    <button routerLink="" mat-icon-button>
+      <mat-icon aria-label="Adicionar Cliente" class="example-icon">add_circle</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-nav-list #shoes>
+  <mat-list-item *ngFor="let cliente of clientes" focus>
+    <mat-icon matListIcon>view_list</mat-icon>
+    <h3 matLine> {{cliente.nome}} </h3>
+    <button type="button" aria-label="Toggle sidenav" routerLink="" mat-icon-button>
+        <mat-icon class="material-icons">
+            edit</mat-icon>
+    </button>
+    <button type="button" aria-label="Toggle sidenav" mat-icon-button>
+        <mat-icon class="material-icons leftIcon">
+            delete_outline</mat-icon>
+    </button>
+  </mat-list-item>
+</mat-nav-list>
+<h3 *ngIf="funcionarios == 0" style="text-align: center">Parece que não existe nenhum dado cadastrado</h3>
