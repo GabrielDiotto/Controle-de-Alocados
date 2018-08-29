@@ -1,39 +1,47 @@
-<div class="mat-elevation-z8">
-  <table mat-table [dataSource]="alocados">
+<mat-toolbar>
+  <mat-toolbar-row>
+    <span>Alocar</span>
+    <span class="example-spacer"></span>
+    <button routerLink="" mat-icon-button>
+      <mat-icon aria-label="Adicionar Funcionário" class="example-icon">add_circle</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
 
-    <!-- Position Column -->
+<mat-form-field>
+    <input class="filter" matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtro">
+</mat-form-field>
+
+<div class="mat-elevation-z8">
+
+  <table mat-table [dataSource]="alocados" matSort>
     <ng-container matColumnDef="funcionario">
-      <th mat-header-cell *matHeaderCellDef> Funcionário </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Funcionário </th>
       <td mat-cell *matCellDef="let element"> {{element.funcionario}} </td>
     </ng-container>
 
-    <!-- Name Column -->
     <ng-container matColumnDef="cliente">
-      <th mat-header-cell *matHeaderCellDef> Cliente </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Cliente </th>
       <td mat-cell *matCellDef="let element"> {{element.cliente}} </td>
     </ng-container>
 
-    <!-- Weight Column -->
     <ng-container matColumnDef="inicioPrevisto">
-      <th mat-header-cell *matHeaderCellDef> Início Previsto </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Início Previsto </th>
       <td mat-cell *matCellDef="let element"> {{element.inicioPrevisto}} </td>
     </ng-container>
 
-    <!-- Symbol Column -->
     <ng-container matColumnDef="inicio">
-      <th mat-header-cell *matHeaderCellDef> Início </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Início </th>
       <td mat-cell *matCellDef="let element"> {{element.inicio}} </td>
     </ng-container>
 
-    <!-- Symbol Column -->
     <ng-container matColumnDef="fimPrevisto">
-      <th mat-header-cell *matHeaderCellDef> Fim Previsto </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Fim Previsto </th>
       <td mat-cell *matCellDef="let element"> {{element.fimPrevisto}} </td>
     </ng-container>
 
-    <!-- Symbol Column -->
     <ng-container matColumnDef="fim">
-      <th mat-header-cell *matHeaderCellDef> Fim </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Fim </th>
       <td mat-cell *matCellDef="let element"> {{element.fim}} </td>
     </ng-container>
 

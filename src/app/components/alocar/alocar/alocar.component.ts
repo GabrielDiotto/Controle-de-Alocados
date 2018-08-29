@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatPaginator, MatTableDataSource} from '@angular/material';
+import {MatTableDataSource, MatPaginator, MatSort} from '@angular/material';
 import { AlocarService } from '../../../services/alocar/alocar.service';
 import Alocados from '../../../model/alocados';
 
@@ -16,8 +16,11 @@ export class AlocarComponent implements OnInit {
   displayedColumns: string[] = ['funcionario', 'cliente', 'inicioPrevisto', 'inicio', 'fimPrevisto', 'fim'];
   dataSource = new MatTableDataSource<Alocados>(this.alocados);
 
+  @ViewChild(MatSort) sort: MatSort;
+
   ngOnInit() {
     this.getAlocados();
+    this.dataSource.sort = this.sort;
   }
 
   getAlocados(): void {
