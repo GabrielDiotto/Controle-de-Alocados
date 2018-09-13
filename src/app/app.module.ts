@@ -41,7 +41,6 @@ import { LoginComponent } from './components/login/login.component';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { ChartsModule } from 'ng2-charts';
 import { FuncionariosComponent } from './components/funcionarios/funcionarios.component';
-import { ApiService } from './services/api.service';
 import { FuncionariosService } from './services/funcionarios/funcionarios.service';
 import { ClientesService } from './services/clientes/clientes.service';
 import { AlocarService } from './services/alocar/alocar.service';
@@ -131,7 +130,6 @@ import { AlocarComponent } from './components/alocar/alocar/alocar.component';
     MatCheckboxModule
   ],
   providers: [
-    { provide: ApiService, useClass: ApiService },
     { provide: FuncionariosService, useClass: FuncionariosService },
     { provide: ClientesService, useClass: ClientesService },
     { provide: AlocarService, useClass: AlocarService },

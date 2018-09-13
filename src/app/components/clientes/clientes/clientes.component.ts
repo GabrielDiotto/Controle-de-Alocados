@@ -18,6 +18,7 @@ export class ClientesComponent implements OnInit {
   getClientes(): void {
     this.clienteService.getClientes()
         .subscribe(clientes => {
+          debugger
           this.clientes = clientes
           console.log(this.clientes)
         })
