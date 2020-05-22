@@ -68,7 +68,7 @@
   "alocados": [
     {
       "funcionario": "Gabriel Diotto",
-      "cliente": "Mongeral",
+      "cliente": "Cliente I",
       "inicioPrevisto": "10/10/2018",
       "inicio": "12/10/2018",
       "fimPrevisto": "10/10/2019",
@@ -76,7 +76,7 @@
     },
     {
       "funcionario": "Lorrann Rafael",
-      "cliente": "Mongeral",
+      "cliente": "Cliente I",
       "inicioPrevisto": "10/10/2018",
       "inicio": "12/10/2018",
       "fimPrevisto": "10/10/2019",
@@ -84,7 +84,7 @@
     },
     {
       "funcionario": "Paulo Vitar",
-      "cliente": "Mongeral",
+      "cliente": "Cliente I",
       "inicioPrevisto": "10/10/2018",
       "inicio": "12/10/2018",
       "fimPrevisto": "10/10/2019",
